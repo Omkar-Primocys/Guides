@@ -24,21 +24,21 @@ To create Users for DB ```create user 'username'@'localhost' identified with mys
 
 To select database ```use DBname```
 
-To list user *you must be in mysql DB* and than run this query to see all the users ```select user from user```
+To list user **you must be in mysql DB** and than run this query to see all the users ```select user from user```
 
 Providing Previledges to new user ```grant all on DBname.* to 'userName'@'localhost' ```
 
 To see the Mysql in PHPMyAdmin we have to install PHP ```sudo apt install php``` 
 and after this install php my admin ```sudo apt instal phpmyadmin```
 
-after that you will se a screen to select server *chose Apache is recommended*
-select server than press *space bar key*
+after that you will se a screen to select server **chose Apache is recommended**
+select server than press **space bar key**
 
 that will auto  install the server and dependencies
 
 It will ask to configure Server by yourself So you ca choose no if you want default primary auto setup configuration
 
-*Congratulation Your server setup is done for mysql phpmyadmin*
+**Congratulation Your server setup is done for mysql phpmyadmin**
 
 enter the ip address in browser to see that.  you will enter local host if you are accesing the server whithin your local server
 Enter Credentials and you are good to go 

@@ -1,6 +1,6 @@
 <!-- My Sql instalation -->
 
-To install MySql Server ```sudo apt mysql-server```
+To install MySql Server ```sudo apt install mysql-server```
 To start MySql cmd ```sudo mysql```
 
 <!-- Authentication Methiod -->
@@ -29,7 +29,7 @@ To list user **you must be in mysql DB** and than run this query to see all the 
 Providing Previledges to new user ```grant all on DBname.* to 'userName'@'localhost' ```
 
 To see the Mysql in PHPMyAdmin we have to install PHP ```sudo apt install php``` 
-and after this install php my admin ```sudo apt instal phpmyadmin```
+and after this install php my admin ```sudo apt install phpmyadmin```
 
 after that you will se a screen to select server **chose Apache is recommended**
 select server than press **space bar key**

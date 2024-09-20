@@ -22,7 +22,7 @@ nvm list-remote
 ```
 
 ### Select specific version run this command
-- [You can replace v14.10.0 as per your required version]
+- You can replace v14.10.0 as per your required version
 ```bash
     nvm install v14.10.0
 ```
@@ -33,10 +33,10 @@ nvm list
 ``` 
 
 ### To switch in another version of node which is already installed in your device
-- [You can replace v14.10.0 as per your required version]
+- You can replace v14.10.0 as per your required version
 ```bash
 nvm use v14.10.0
 ```
-- [to check current verion of node]
-- ```bash node -v ```
+- To check current verion of node
+- ``` node -v ```
 

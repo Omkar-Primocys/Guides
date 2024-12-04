@@ -1,2 +1,44 @@
-# MySQL Installation and Configuration Guide\n\n## Installing MySQL Server\nTo install MySQL Server, run:\n```bash\nsudo apt install mysql-server\n```\n\nTo start the MySQL command-line client, use:\n```bash\nsudo mysql\n```\n\n---\n\n## Setting Up Authentication\n\nTo set up the root user with a password, run the following command inside the MySQL client:\n```sql\nALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YourPassword';\n```\n\nExit the MySQL client:\n```bash\nexit\n```\n\n### Secure Installation\nTo secure your MySQL installation, run:\n```bash\nmysql_secure_installation\n```\n\nThis will prompt you to:\n- Enter the root password.\n- Set password strength requirements.\n- Confirm various security settings (type \"yes\" for all recommended configurations for better security).\n\nAfter securing the installation, you can access MySQL securely:\n```bash\nmysql -u root -p\n```\n\nEnter the root password to log in.\n\n---\n\n## Basic MySQL Commands\n\n### Create a Database\n```sql\nCREATE DATABASE DBname;\n```\n\n### Show All Databases\n```sql\nSHOW SCHEMAS;\n```\n\n### Select a Database\n```sql\nUSE DBname;\n```\n\n### Create a New User\n```sql\nCREATE USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'userPassword';\n```\n\n### Grant Privileges to a User\n```sql\nGRANT ALL ON DBname.* TO 'username'@'localhost';\n```\n\n### List All Users\nSwitch to the `mysql` database and run:\n```sql\nSELECT user FROM user;\n```\n\n---\n\n## Installing phpMyAdmin\n\nTo manage MySQL using a graphical interface, install phpMyAdmin. First, install PHP:\n```bash\nsudo apt install php\n```\n\nThen, install phpMyAdmin:\n```bash\nsudo apt install phpmyadmin\n```\n\nDuring the installation:\n1. **Select the web server** (Apache is recommended). Highlight it and press the **space bar** to select.\n2. **Choose auto-configuration** (select \"No\" if you want default settings).\n\nOnce installed, phpMyAdmin and its dependencies will be ready to use.\n\n---\n\n## Accessing phpMyAdmin\n\n1. Open a browser.\n2. Enter the IP address of your server or `localhost` if accessing from the same server.\n3. Log in using your MySQL credentials.\n\n---\n\n**Congratulations! Your MySQL and phpMyAdmin setup is complete.**
+<!-- My Sql instalation -->
 
+To install MySql Server ```sudo apt install mysql-server```
+To start MySql cmd ```sudo mysql```
+
+<!-- Authentication Methiod -->
+
+To set  Root User ```alter user 'root'@'localhost' identified with mysql_native_password by 'Your Password'     ```
+type ```exit``` to exi the mysql cmd
+
+For Secure installation validate Passsword Component ```mysql_secure_installation``` this will ask to enter root password. 
+setup passwrd strenght standards 
+typr yes for all configurations for more security
+
+Now the Mysql cmd is Secure so to open that follow this
+```mysql -u root -p```
+
+After entering passwod you can run queries in mysql
+To Create database ``` create database DBname```
+
+To show all the DB ```show schemas``
+
+To create Users for DB ```create user 'username'@'localhost' identified with mysql_native_password by 'userPassword'```
+
+To select database ```use DBname```
+
+To list user **you must be in mysql DB** and than run this query to see all the users ```select user from user```
+
+Providing Previledges to new user ```grant all on DBname.* to 'userName'@'localhost' ```
+
+To see the Mysql in PHPMyAdmin we have to install PHP ```sudo apt install php``` 
+and after this install php my admin ```sudo apt install phpmyadmin```
+
+after that you will se a screen to select server **chose Apache is recommended**
+select server than press **space bar key**
+
+that will auto  install the server and dependencies
+
+It will ask to configure Server by yourself So you ca choose no if you want default primary auto setup configuration
+
+**Congratulation Your server setup is done for mysql phpmyadmin**
+
+enter the ip address in browser to see that.  you will enter local host if you are accesing the server whithin your local server
+Enter Credentials and you are good to go 
